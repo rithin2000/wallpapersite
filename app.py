@@ -21,7 +21,7 @@ def extract(query):
 
 @app.route('/')
 def index():
-    extract("nature")
+    extract("forest")
     return render_template('index.html', wallpapers=wallpapers)
 
 
