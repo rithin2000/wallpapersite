@@ -2,15 +2,17 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    background-image: url('static/images/.wallpaper.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh;
+    position: relative;
+    overflow-y: auto; /* Enable vertical scrolling */
 }
 
+
+
+
 header {
-    background-color: #333;
     color: #fff;
     padding: 15px;
     text-align: center;
@@ -26,6 +28,7 @@ header {
     border: none;
     border-radius: 5px;
     margin-right: 10px;
+    width: 200px; /* Adjust the width as needed */
 }
 
 .search-form button {
@@ -42,7 +45,30 @@ main {
     max-width: 1200px;
     margin: 20px auto;
     padding: 20px;
+    height: 100vh;
 }
+
+/* For Firefox */
+.wallpaper-upper-div {
+    overflow-y: auto;
+    height: 100vh;
+}
+
+/* For WebKit/Blink browsers (Chrome, Safari) */
+.wallpaper-upper-div::-webkit-scrollbar {
+    width: 12px;
+}
+
+.wallpaper-upper-div::-webkit-scrollbar-thumb {
+    background-color: #f8f4f4;
+    border-radius: 6px;
+}
+
+.wallpaper-upper-div::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+
 
 .wallpaper {
     margin-bottom: 30px;
@@ -61,6 +87,8 @@ main {
 .info {
     padding: 15px;
     text-align: center;
+    color: white;
+    font-size: 15px;
 }
 
 footer {
@@ -70,4 +98,11 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+/* Media query for wider screens */
+@media screen and (min-width: 768px) {
+    .search-form input {
+        width: 300px; /* Adjust the width as needed for wider screens */
+    }
 }

@@ -6,8 +6,13 @@
     <link rel="stylesheet" href="static/index.css">
     <title>Wallpaper Site</title>
 </head>
-<body>
 
+<style>
+    body{
+        background-image: url("{{wallpapers[0]['largeImageURL']}}");
+    }
+</style>
+<body>
     <header>
         <h1>Wallpaper Site</h1>
         <form action="{{ url_for('search') }}" method="GET" class="search-form">
@@ -18,22 +23,24 @@
     
     <main>
         {% if query %}
-            <h2 class="search-results">Search Results for "{{ query }}"</h2>
+            <h2 class="search-results" style="text-align: center;">{{ query }}</h2>
         {% endif %}
-        {% for wallpaper in wallpapers %}
-            <div class="wallpaper">
-                <img src="{{ wallpaper.largeImageURL }}" alt="Wallpaper">
-                <div class="info">
-                    <p>Views: {{ wallpaper.views }}</p>
-                    <p>Likes: {{ wallpaper.likes }}</p>
-                    <p>Downloads: {{ wallpaper.downloads }}</p>
+        <div class="wallpaper-upper-div">
+            {% for wallpaper in wallpapers %}
+                <div class="wallpaper">
+                    <img src="{{ wallpaper.largeImageURL }}" alt="Wallpaper">
+                    <div class="info">
+                        <p>Views: {{ wallpaper.views }}</p>
+                        <p>Likes: {{ wallpaper.likes }}</p>
+                        <p>Downloads: {{ wallpaper.downloads }}</p>
+                    </div>
                 </div>
-            </div>
-        {% endfor %}
+            {% endfor %}
+        </div>
     </main>
 
     <footer>
-        <p>&copy; 2023 Wallpaper Site</p>
+        <p>&copy; 2023 Wallpaper Site -RD</p>
     </footer>
 
 </body>
