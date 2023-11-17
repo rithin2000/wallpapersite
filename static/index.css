@@ -1,6 +1,5 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
+    font-family: 'Montserrat', sans-serif;    margin: 0;
     padding: 0;
     background-size: cover;
     background-position: center;
@@ -11,7 +10,10 @@ body {
 
 }
 
-
+h2{
+    color: ghostwhite;
+    font-weight: normal;
+}
 
 
 header {
@@ -85,15 +87,17 @@ main {
 .wallpaper img {
     width: 100%;
     height: auto;
-    border-radius: 10px 10px 0 0;
 }
 
 .info {
     padding: 15px;
     text-align: center;
     color: white;
-    background-color: #352929;
+    background-color:black;
     font-size: 15px;
+    border-radius: 10px; /* Add border-radius for rounded corners */
+    margin-top: 15px; /* Add margin for spacing */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
 }
 
 footer {

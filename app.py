@@ -16,7 +16,7 @@ def extract(query):
                    "image_type":"photo",
                    "orientation":"horizontal",
                    "page": 1,
-                   "per_page": 50}
+                   "per_page": 100}
         response = requests.get(url,params)
         data = response.json()  
         if response.status_code==200:
