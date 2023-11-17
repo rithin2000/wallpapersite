@@ -114,4 +114,7 @@ footer {
     .search-form input {
         width: 300px; /* Adjust the width as needed for wider screens */
     }
+    footer {
+        position: sticky;
+    }
 }
