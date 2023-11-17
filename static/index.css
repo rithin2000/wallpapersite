@@ -7,6 +7,8 @@ body {
     height: 100vh;
     position: relative;
     overflow-y: auto; /* Enable vertical scrolling */
+    backdrop-filter: brightness(0.5);
+
 }
 
 
@@ -52,6 +54,7 @@ main {
 .wallpaper-upper-div {
     overflow-y: auto;
     height: 100vh;
+
 }
 
 /* For WebKit/Blink browsers (Chrome, Safari) */
@@ -66,6 +69,7 @@ main {
 
 .wallpaper-upper-div::-webkit-scrollbar-track {
     background-color: transparent;
+
 }
 
 
@@ -88,14 +92,15 @@ main {
     padding: 15px;
     text-align: center;
     color: white;
+    background-color: #352929;
     font-size: 15px;
 }
 
 footer {
     color: #fff;
-    text-align: center;
+    text-align: justify;
     padding: 1px;
-    position: fixed;
+    position: sticky;
     bottom: 0;
     width: 100%;
 }
